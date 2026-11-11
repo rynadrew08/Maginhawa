@@ -1,0 +1,6 @@
+{
+  "name": "MAGINHAWA",
+  "description": "Marikina-based men's leather footwear brand. Chic. Classy. Comfortable.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
