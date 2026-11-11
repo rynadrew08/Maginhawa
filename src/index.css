@@ -1,0 +1,115 @@
+@import "tailwindcss";
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    background-color: #4B1419;
+    color: #231A18;
+    font-family: 'Cormorant Garamond', Georgia, serif;
+  }
+
+  body {
+    margin: 0;
+    padding: 0;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+
+.font-serif-editorial {
+  font-family: 'Cormorant Garamond', 'Playfair Display', Georgia, serif;
+}
+
+.font-display-serif {
+  font-family: 'Playfair Display', 'Cormorant Garamond', Georgia, serif;
+}
+
+.font-script {
+  font-family: 'Great Vibes', cursive;
+}
+
+.font-nav {
+  font-family: 'Montserrat', sans-serif;
+}
+
+/* Warm parchment paper texture matching the reference PDF */
+.bg-parchment {
+  background-color: #E3D6C3;
+  background-image:
+    radial-gradient(rgba(75, 20, 25, 0.03) 1px, transparent 0),
+    radial-gradient(rgba(130, 100, 75, 0.04) 1px, transparent 0);
+  background-size: 24px 24px;
+  background-position: 0 0, 12px 12px;
+}
+
+.bg-maroon {
+  background-color: #4B1419;
+}
+
+.bg-maroon-deep {
+  background-color: #3D0F13;
+}
+
+/* Subtle floating image hover — NO zoom, NO scale, preserves proportions */
+.img-float-hover {
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.img-float-hover:hover {
+  transform: translateY(-5px);
+}
+
+/* Navigation link hover: smooth transition to warm champagne gold */
+.nav-link-hover {
+  transition: color 0.25s ease, opacity 0.25s ease;
+}
+
+.nav-link-hover:hover {
+  color: #E2C799;
+}
+
+/* Designated block headings: subtle champagne gold gradient on hover */
+.heading-gradient-dark {
+  transition: background-position 0.35s ease, color 0.35s ease;
+}
+
+.heading-gradient-dark:hover {
+  background: linear-gradient(90deg, #231A18 0%, #8E6A34 50%, #4B1419 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.heading-gradient-light {
+  transition: background-position 0.35s ease, color 0.35s ease;
+}
+
+.heading-gradient-light:hover {
+  background: linear-gradient(90deg, #F5EFE6 0%, #E2C799 55%, #F5EFE6 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* Smooth page transition fade */
+@keyframes pageFadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.page-fade-in {
+  animation: pageFadeIn 0.28s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .img-float-hover:hover {
+    transform: none;
+  }
+  .page-fade-in {
+    animation: none;
+  }
+}
